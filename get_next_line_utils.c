@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:02:01 by harndt            #+#    #+#             */
-/*   Updated: 2022/05/16 13:07:56 by harndt           ###   ########.fr       */
+/*   Updated: 2022/05/17 16:48:27 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(const char *str)
 	int	size;
 
 	size = 0;
-	if (!str)
-		return (size);
 	while (str[size])
 		size++;
 	return (size);

@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:01:22 by harndt            #+#    #+#             */
-/*   Updated: 2022/05/16 13:08:02 by harndt           ###   ########.fr       */
+/*   Updated: 2022/05/17 16:48:19 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,10 @@ static char	*ft_read(int fd, char *buffer, char *str)
 	int		size;
 	size_t	i;
 
-	i = ft_strlen(str);
+	if (!str)
+		i = 0;
+	else
+		i = ft_strlen(str);
 	size = read(fd, buffer, BUFFER_SIZE);
 	while (size)
 	{
